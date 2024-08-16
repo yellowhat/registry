@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.20.1
+FROM docker.io/alpine:3.20.2
 
 RUN apk add --no-cache git-daemon \
  && git config --global user.email a@me.com \
