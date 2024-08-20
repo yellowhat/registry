@@ -8,12 +8,13 @@ RUN apk add --no-cache \
         coreutils \
         curl \
         drill \
+        file \
         findutils \
         fping \
         git \
         gping \
         ipcalc \
-        iperf \
+        iperf3 \
         iproute2 \
         iputils \
         jq \
@@ -21,6 +22,7 @@ RUN apk add --no-cache \
         macchanger \
         masscan \
         mtr \
+        neovim \
         net-tools \
         netcat-openbsd \
         nftables \
@@ -29,15 +31,16 @@ RUN apk add --no-cache \
         nmap \
         nmap-nping \
         nmap-scripts \
-        oath-toolkit-oathtool \
         openssh-client \
         openssl \
         procps \
         socat \
         speedtest-cli \
+        strace \
         tcpdump \
         tcptraceroute \
+        termshark \
         tshark \
-        wget
+        vim
 
-CMD ["/bin/bash", "--login"]
+ENTRYPOINT ["/bin/bash"]
