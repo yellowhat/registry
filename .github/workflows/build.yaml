@@ -19,6 +19,7 @@ jobs:
           - curl-jq
           - git-server
           - network-tools
+          - rpmlint
           - stirling-pdf
     steps:
       - name: Checkout repository

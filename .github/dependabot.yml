@@ -18,6 +18,10 @@ updates:
     schedule:
       interval: daily
   - package-ecosystem: docker
+    directory: /rpmlint
+    schedule:
+      interval: daily
+  - package-ecosystem: docker
     directory: /stirling-pdf
     schedule:
       interval: daily
