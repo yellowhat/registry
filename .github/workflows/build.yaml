@@ -19,6 +19,7 @@ jobs:
           - curl-jq
           - git-server
           - network-tools
+          - pgvecto-rs
           - rpmlint
           - stirling-pdf
     steps:

@@ -18,6 +18,10 @@ updates:
     schedule:
       interval: daily
   - package-ecosystem: docker
+    directory: /pgvecto-rs
+    schedule:
+      interval: daily
+  - package-ecosystem: docker
     directory: /rpmlint
     schedule:
       interval: daily

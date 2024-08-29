@@ -1,0 +1,14 @@
+FROM docker.io/bitnami/postgresql:16.4.0-debian-12-r4
+
+COPY --from=docker.io/tensorchord/pgvecto-rs-binary:pg16-v0.3.0-amd64 /pgvecto-rs-binary-release.deb /tmp/vectors.deb
+
+USER root
+
+RUN apt-get install -y /tmp/vectors.deb \
+ && rm -f /tmp/vectors.deb \
+ && mv /usr/lib/postgresql/*/lib/vectors.so /opt/bitnami/postgresql/lib/ \
+ && mv usr/share/postgresql/*/extension/vectors* opt/bitnami/postgresql/share/extension/
+
+USER 1001
+
+ENV POSTGRESQL_EXTRA_FLAGS="-c shared_preload_libraries=vectors.so"
