@@ -1,4 +1,4 @@
-FROM docker.io/bitnami/postgresql:16.4.0-debian-12-r12
+FROM docker.io/bitnami/postgresql:16.4.0-debian-12-r13
 
 COPY --from=docker.io/tensorchord/pgvecto-rs-binary:pg16-v0.3.0-amd64 /pgvecto-rs-binary-release.deb /tmp/vectors.deb
 
