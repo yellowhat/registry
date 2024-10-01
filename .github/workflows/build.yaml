@@ -37,7 +37,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract tag from Dockerfile
-        run: echo "BASE_TAG=$(grep FROM Dockerfile | cut -d ':' -f 2)" >>$GITHUB_ENV
+        run: echo "BASE_TAG=$(grep FROM Dockerfile | tail -1 | cut -d ':' -f 2)" >>$GITHUB_ENV
         working-directory: ${{ matrix.dir }}
 
       - name: Docker - Extract metadata (tags, labels)
