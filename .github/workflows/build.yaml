@@ -20,6 +20,7 @@ jobs:
           - git-server
           - network-tools
           - pgvecto-rs
+          - qbittorrent
           - rpmlint
           - stirling-pdf
     steps:
@@ -37,7 +38,13 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract tag from Dockerfile
-        run: echo "BASE_TAG=$(grep FROM Dockerfile | tail -1 | cut -d ':' -f 2)" >>$GITHUB_ENV
+        run: |
+          if [ -f version.sh ]; then
+              BASE_TAG=$(bash version.sh)
+          else
+              BASE_TAG=$(grep FROM Dockerfile | tail -1 | cut -d ':' -f 2)
+          fi
+          echo "BASE_TAG=$BASE_TAG" >>$GITHUB_ENV
         working-directory: ${{ matrix.dir }}
 
       - name: Docker - Extract metadata (tags, labels)
