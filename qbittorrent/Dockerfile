@@ -9,4 +9,4 @@ RUN wget \
     "https://github.com/userdocs/qbittorrent-nox-static/releases/download/${QBITTORRENT_VERSION}/x86_64-qbittorrent-nox" \
  && chmod +x /qbittorrent
 
-ENTRYPOINT [ "/qbittorrent" ]
+ENTRYPOINT [ "/qbittorrent", "--profile=/tmp" ]
