@@ -1,4 +1,5 @@
-FROM docker.io/alpine:3.20.3
+# python is required to use search engine
+FROM docker.io/python:3.13.0-alpine
 
 ENV QBT_CONFIRM_LEGAL_NOTICE=1 \
     QBT_WEBUI_PORT=8080
