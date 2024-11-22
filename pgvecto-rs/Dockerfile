@@ -1,6 +1,6 @@
 FROM docker.io/tensorchord/pgvecto-rs-binary:pg16-v0.3.0-${TARGETARCH} as binary
 
-FROM docker.io/bitnami/postgresql:16.5.0-debian-12-r0
+FROM docker.io/bitnami/postgresql:16.6.0-debian-12-r0
 
 USER root
 
