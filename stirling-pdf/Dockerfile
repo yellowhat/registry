@@ -1,3 +1,3 @@
-FROM ghcr.io/stirling-tools/stirling-pdf:0.33.1
+FROM ghcr.io/stirling-tools/stirling-pdf:0.34.0
 
 RUN apk add --no-cache tesseract-ocr-data-deu
