@@ -1,9 +1,3 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "packageRules: [
-    {
-      "matchDepNames": ["userdocs/qbittorrent-nox-static"],
-      "extractVersion": "^release-(?<version>v\\d+\\.\\d+\\.\\d+)_",
-    }
-  ]  
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
 }
