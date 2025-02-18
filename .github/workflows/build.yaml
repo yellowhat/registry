@@ -21,7 +21,6 @@ jobs:
           - network-tools
           - pgvecto-rs
           - qbittorrent
-          - rpmlint
           - stirling-pdf
     steps:
       - name: Checkout repository
