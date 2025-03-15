@@ -1,4 +1,4 @@
-# stirling-pdf
+# git-server
 
 ## Run as root
 

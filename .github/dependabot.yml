@@ -22,6 +22,10 @@ updates:
     schedule:
       interval: daily
   - package-ecosystem: docker
-    directory: /stirling-pdf
+    directory: /qbittorrent
+    schedule:
+      interval: daily
+  - package-ecosystem: docker
+    directory: /smartctl-exporter
     schedule:
       interval: daily
