@@ -1,3 +1,12 @@
+FROM docker.io/golang:1.24.1-alpine as builder
+
+RUN apk add --no-cache git
+
+RUN git clone https://github.com/prometheus-community/smartctl_exporter --depth 1 --branch v0.13.0 \
+ && cd smartctl_exporter \
+ && go build \
+ && cp smartctl_exporter /
+
 FROM docker.io/alpine:3.21.2
 
 RUN apk add --no-cache curl \
@@ -10,6 +19,6 @@ RUN apk add --no-cache curl \
  # smartctl_exporter looks for /usr/sbin/smartctl
  && ln -s /usr/local/sbin/smartctl /usr/sbin/smartctl
 
-COPY --from=docker.io/prometheuscommunity/smartctl-exporter:v0.13.0 /bin/smartctl_exporter /bin/
+COPY --from=builder /smartctl_exporter /bin/
 
 ENTRYPOINT  ["/bin/smartctl_exporter"]
