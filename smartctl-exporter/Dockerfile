@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.24.1 as smartctl_exporter
+FROM docker.io/golang:1.24.2 as smartctl_exporter
 
 RUN git clone https://github.com/prometheus-community/smartctl_exporter --depth 1 --branch v0.13.0 \
  && cd smartctl_exporter \
