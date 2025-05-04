@@ -20,6 +20,7 @@ jobs:
           - git-server
           - network-tools
           - pgvecto-rs
+          - podinfo
           - qbittorrent
           - smartctl-exporter
     steps:
