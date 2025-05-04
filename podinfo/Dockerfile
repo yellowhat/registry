@@ -1,11 +1,14 @@
 FROM docker.io/golang:1.24.2 AS build
 
+# renovate: datasource=docker depName=registry.gitlab.com/yellowhat-labs/podinfo
+ARG PODINFO_VER=v1.2.0
+
 # Create statically linked executable
 ARG CGO_ENABLED=0
 
 WORKDIR /app
 
-RUN git clone https://gitlab.com/yellowhat-labs/podinfo/ --branch v1.2.0 \
+RUN git clone https://gitlab.com/yellowhat-labs/podinfo/ --branch "$PODINFO_VER" \
  && cd podinfo \
  && go mod download \
  && go mod verify \

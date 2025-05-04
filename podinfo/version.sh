@@ -2,4 +2,4 @@
 # How to gather version
 set -euo pipefail
 
-grep branch Dockerfile | cut -d " " -f 6
+grep PODINFO_VER= Dockerfile | cut -d "=" -f 2
