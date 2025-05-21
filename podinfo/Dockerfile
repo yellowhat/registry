@@ -1,7 +1,7 @@
 FROM docker.io/golang:1.24.3 AS build
 
 # renovate: datasource=docker depName=registry.gitlab.com/yellowhat-labs/podinfo
-ARG PODINFO_VER=v1.2.0
+ARG PODINFO_VER=v1.3.0
 
 # Create statically linked executable
 ARG CGO_ENABLED=0
