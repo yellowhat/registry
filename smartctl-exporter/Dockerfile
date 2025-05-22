@@ -5,7 +5,7 @@ RUN git clone https://github.com/prometheus-community/smartctl_exporter --depth 
  && go build \
  && cp smartctl_exporter /
 
-FROM docker.io/debian:12.10 as smartctl
+FROM docker.io/debian:12.11 as smartctl
 
 RUN apt-get update \
  && apt-get install -y automake make git g++ \
@@ -18,7 +18,7 @@ RUN apt-get update \
  && make \
  && mv smartctl /
 
-FROM docker.io/debian:12.10-slim
+FROM docker.io/debian:12.11-slim
 
 # smartctl_exporter looks for /usr/sbin/smartctl
 COPY --from=smartctl /smartctl /usr/sbin/smartctl
