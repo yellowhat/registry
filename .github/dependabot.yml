@@ -18,10 +18,6 @@ updates:
     schedule:
       interval: daily
   - package-ecosystem: docker
-    directory: /pgvecto-rs
-    schedule:
-      interval: daily
-  - package-ecosystem: docker
     directory: /qbittorrent
     schedule:
       interval: daily

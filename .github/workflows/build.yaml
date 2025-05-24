@@ -19,7 +19,6 @@ jobs:
           - curl-jq
           - git-server
           - network-tools
-          - pgvecto-rs
           - podinfo
           - qbittorrent
           - smartctl-exporter
