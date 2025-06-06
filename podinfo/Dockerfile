@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.24.3 AS build
+FROM docker.io/golang:1.24.4 AS build
 
 # renovate: datasource=docker depName=registry.gitlab.com/yellowhat-labs/podinfo
 ARG PODINFO_VER=v1.3.1
