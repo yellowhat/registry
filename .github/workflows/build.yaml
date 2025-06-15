@@ -19,7 +19,6 @@ jobs:
           - curl-jq
           - git-server
           - network-tools
-          - podinfo
           - qbittorrent
           - smartctl-exporter
     steps:
