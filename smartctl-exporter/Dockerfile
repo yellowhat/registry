@@ -2,7 +2,9 @@ FROM docker.io/golang:1.24.5 as smartctl_exporter
 
 # renovate: datasource=github-releases depName=prometheus-community/smartctl_exporter
 ARG SMART_VER=v0.14.0
-RUN git clone https://github.com/prometheus-community/smartctl_exporter --depth 1 --branch "SMART_VER" \
+RUN git clone https://github.com/prometheus-community/smartctl_exporter \
+        --depth 1 \
+        --branch "$SMART_VER" \
  && cd smartctl_exporter \
  && go build \
  && cp smartctl_exporter /
