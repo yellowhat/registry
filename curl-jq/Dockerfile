@@ -1,4 +1,4 @@
-FROM docker.io/alpine:3.22.1@sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1
+FROM docker.io/alpine:3.22.1
 
 # renovate: datasource=repology depName=alpine_3_22/bash versioning=loose
 ARG BASH_VER=5.2.37-r0
