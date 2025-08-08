@@ -16,8 +16,6 @@ jobs:
     strategy:
       matrix:
         dir:
-          - curl-jq
-          - git-server
           - network-tools
           - qbittorrent
           - smartctl-exporter
