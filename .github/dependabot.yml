@@ -6,22 +6,6 @@ updates:
     schedule:
       interval: daily
   - package-ecosystem: docker
-    directory: /curl-jq
-    schedule:
-      interval: daily
-  - package-ecosystem: docker
-    directory: /git-server
-    schedule:
-      interval: daily
-  - package-ecosystem: docker
-    directory: /network-tools
-    schedule:
-      interval: daily
-  - package-ecosystem: docker
-    directory: /qbittorrent
-    schedule:
-      interval: daily
-  - package-ecosystem: docker
     directory: /smartctl-exporter
     schedule:
       interval: daily
