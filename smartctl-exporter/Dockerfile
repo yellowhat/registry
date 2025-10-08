@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.25.1 as smartctl_exporter
+FROM docker.io/golang:1.25.2 as smartctl_exporter
 
 # renovate: datasource=github-releases depName=prometheus-community/smartctl_exporter
 ARG SMART_VER=v0.14.0
