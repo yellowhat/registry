@@ -16,7 +16,6 @@ jobs:
     strategy:
       matrix:
         dir:
-          - network-tools
           - smartctl-exporter
     steps:
       - name: Checkout repository
